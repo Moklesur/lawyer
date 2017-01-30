@@ -33,6 +33,7 @@ a,.btn,.woocommerce ul.products li.product .button,.form-control,.woocommerce .c
 h1, h2, h3, h4, h5, h6{
 	letter-spacing: 2px;
 	font-weight: 700;
+	font-family: oswald;
 }
 a,p,.woocommerce input.button,.woocommerce-cart .cart-collaterals .cart_totals tr th,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce .cart th,.woocommerce table.shop_table th,.woocommerce-Address address {
 	letter-spacing: 1px;
@@ -49,6 +50,7 @@ p,.woocommerce-Address address {
 }
 .page-header{
 	margin:0 0 20px;
+	font-family: oswald;
 }
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
 	margin: 0;
@@ -685,7 +687,7 @@ header,.sticky .header-bottom{
     ## Footer
 ********************************************************/
 .footer-top{
-	background: #ddd;
+	background: #052134;
 }
 .footer-social a{
 	margin-top: 10px;
@@ -698,20 +700,22 @@ header,.sticky .header-bottom{
 .newsletter h3{
 	margin-right: 10px;
 	margin-top: 3px;
+	color:#fff;
 }
 .footer-middle{
-	background: #f9f9f9;
+	background: #062b43;
 	padding-bottom: 40px;
 }
 .footer-middle h4{
 	margin-top: 40px;
+	color:#fff;
 }
 .footer-middle li a{
 	padding: 5px 0;
 }
 .footer-bottom{
 	padding-top: 20px;
-	background: #ddd;
+	background: #052134;
 }
 /********************************************************
     ## Miscellaneous
