@@ -17,9 +17,10 @@ function themetim_typography_color($color) {
     /*
      * General Section
      */
-    $body_text_color = get_theme_mod( 'bg_text_color', '#898989' );
+    $body_text_color = get_theme_mod( 'bg_text_color', '#000' );
     $body_font_size = get_theme_mod( 'body_font_size', '14' );
-    $body_font_family = get_theme_mod( 'body_font_family', 'Open Sans Light' );
+    $body_font_family = get_theme_mod( 'body_font_family', 'Open Sans' );
+
 
     $color .= "body { color:" . esc_attr($body_text_color) . "; font-size: " . esc_attr($body_font_size) . "px; font-family: ". esc_attr(str_replace('+', ' ', $body_font_family)) ."} ";
 
@@ -30,7 +31,7 @@ function themetim_typography_color($color) {
     $link_color = get_theme_mod( 'link_color', '#e27763' );
     $color .= "a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a,.woocommerce div.product .product_title,.woocommerce div.product p.price, .woocommerce div.product span.price,.woocommerce div.product form.cart .variations td.label { color:" . esc_attr($link_color) . "} ";
 
-    $link_hover_color = get_theme_mod( 'link_hover_color', '#052134' );
+    $link_hover_color = get_theme_mod( 'link_hover_color', '#f04d2f' );
     $color .= "a:hover,.header-bottom .navbar-default .active a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a:hover { color:" . esc_attr($link_hover_color) . "} ";
 
     /*
@@ -127,6 +128,8 @@ function themetim_typography_color($color) {
     /*
      * ThemeTim Typography & Color Inline
      */
+
+
 
     wp_add_inline_style( 'themetim', $color );
 }

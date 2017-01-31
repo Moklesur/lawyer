@@ -548,7 +548,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_text_heading', array(
-		'default'           => 'About',
+		'default'           => 'Lawyer',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_heading', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -570,7 +570,7 @@ function themetim_customize_register( $wp_customize ) {
 
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_1', array(
-		'default'           => 'The Service',
+		'default'           => 'Pages',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_1', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -591,7 +591,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_2', array(
-		'default'           => 'Information',
+		'default'           => 'Main office',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -612,7 +612,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_3', array(
-		'default'           => 'Follow Us',
+		'default'           => 'Irvine Office',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_3', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -780,7 +780,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_text_color',
 		array(
-			'default'           => '#898989',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -834,7 +834,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_hover_color',
 		array(
-			'default'           => '#052134',
+			'default'           => '#f04d2f',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1213,6 +1213,7 @@ function themetim_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'esc_attr',
 		)
 	);
+
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'success', array(
 			'label' => __('Primary Button', 'themetidy'),
 			'section' => 'colors',
@@ -1560,7 +1561,7 @@ function themetim_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting( 'section_gap_1', array(
-		'default'           => '0',
+		'default'           => '40',
 	) );
 	$wp_customize->add_control( 'section_gap_1', array(
 		'label' => __( 'Section Gap 1', 'text_domain' ),
@@ -1570,7 +1571,7 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 	$wp_customize->add_setting( 'section_gap_2', array(
-		'default'           => '0',
+		'default'           => '50',
 	) );
 	$wp_customize->add_control( 'section_gap_2', array(
 		'label' => __( 'Section Gap 2', 'text_domain' ),
@@ -1580,7 +1581,7 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 	$wp_customize->add_setting( 'section_gap_3', array(
-		'default'           => '0',
+		'default'           => '50',
 	) );
 	$wp_customize->add_control( 'section_gap_3', array(
 		'label' => __( 'Section Gap 3', 'text_domain' ),
@@ -1590,7 +1591,7 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 	$wp_customize->add_setting( 'section_gap_4', array(
-		'default'           => '0',
+		'default'           => '50',
 	) );
 	$wp_customize->add_control( 'section_gap_4', array(
 		'label' => __( 'Section Gap 4', 'text_domain' ),

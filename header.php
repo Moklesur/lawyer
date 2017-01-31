@@ -37,10 +37,11 @@
 			</div>
 		</div>
 	</section>
-	<!--------------- Header Middle ---------------->
-	<section class="header-middle position-relative">
+	<!--------------- Header Bottom ---------------->
+	<section class="header-bottom">
 		<div class="container">
 			<div class="row">
+				<!--------------- Primary Menu ---------------->
 				<div class="col-md-3 col-sm-4 col-xs-12 logo">
 					<?php
 					if (get_theme_mod('site_logo') != '') : ?>
@@ -50,27 +51,7 @@
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'description' ); ?></a></p>
 					<?php endif ?>
 				</div>
-				<div class="col-md-9 col-sm-8 col-xs-12 text-right mini-cart">
-					<ul class="list-inline">
-						<li>
-							<?php
-							if ( class_exists( 'WooCommerce' ) ) : if(get_theme_mod( 'cart_enable', '1' )) :
-								?>
-								<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-basket"></i> <?php echo WC()->cart->get_cart_total(); ?> <span class="badge"><?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
-								<?php
-							endif; endif;
-							?>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--------------- Header Bottom ---------------->
-	<section class="header-bottom">
-		<div class="container">
-			<div class="row">
-				<!--------------- Primary Menu ---------------->
+				<div class="col-md-9 col-sm-8 col-xs-12 logo">
 				<nav class="navbar navbar-default text-uppercase primary-menu">
 					<div class="navbar-header">
 						<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
@@ -99,6 +80,7 @@
 						<?php endif ?>
 					</div>
 				</nav>
+				</div>
 			</div>
 		</div>
 	</section>

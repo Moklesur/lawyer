@@ -33,8 +33,8 @@ a,.btn,.woocommerce ul.products li.product .button,.form-control,.woocommerce .c
 h1, h2, h3, h4, h5, h6{
 	letter-spacing: 2px;
 	font-weight: 700;
-	font-family: oswald;
 }
+
 a,p,.woocommerce input.button,.woocommerce-cart .cart-collaterals .cart_totals tr th,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce .cart th,.woocommerce table.shop_table th,.woocommerce-Address address {
 	letter-spacing: 1px;
 }
@@ -50,10 +50,11 @@ p,.woocommerce-Address address {
 }
 .page-header{
 	margin:0 0 20px;
-	font-family: oswald;
 }
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
 	margin: 0;
+	color: #e27763;
+
 }
 .badge{
 	padding: 0;
@@ -149,8 +150,9 @@ p,.woocommerce-Address address {
     ## Header
 ********************************************************/
 .header-top {
-	background: #f8f8f8;
+	background: #062b43;
 }
+
 .header-top .header-social a{
 	padding: 0 7px 0 0;
 }
@@ -158,7 +160,8 @@ p,.woocommerce-Address address {
 	margin-top: 25px;
 }
 .header-bottom{
-	background: #f8f8f8;
+	background: #ffffff;
+	padding: 15px 0px;
 }
 .header-bottom .navbar-default{
 	margin-bottom: 0;
@@ -252,6 +255,7 @@ header,.sticky .header-bottom{
 .owl-next{
 	float: right;
 }
+
 /********************************************************
     ## Home
 ********************************************************/
@@ -276,6 +280,18 @@ header,.sticky .header-bottom{
 }
 .testimonial .carousel-indicators .active{
 	background: #000;
+}
+
+.slider-bottom-left{
+	color:#fff;
+}
+.slider-bottom-left h1{
+	color:#fff;
+}
+
+.legal-service h1{
+	font-size:24px;
+	margin-bottom:-15px;
 }
 /********************************************************
     ## Contact Form
@@ -389,6 +405,47 @@ header,.sticky .header-bottom{
 }
 .reply{
 	text-align: right;
+}
+.portfolio-url {
+    font-size: 30px;
+}
+.portfolio-url::after {
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(5, 33, 52);
+}
+.portfolio-url span {
+    color: #fff;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 60%;
+    visibility: hidden;
+    font-size: 22px;
+}
+
+.portfolio-url:hover span {
+    visibility: visible;
+    top: 50%;
+}
+
+.team-content{
+    text-align: center;
+    padding: 0px 10px;
+}
+.team-content p{
+    padding: 0px 10px;
+}
+.team-content h4{
+    padding-top: 10px;
+}
+.img-circle {
+    border-radius: 0%;
 }
 /********************************************************
     ## WooCommerce
