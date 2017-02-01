@@ -9,12 +9,6 @@
 		<div class="carousel-inner" role="listbox">
 			<?php foreach( $instance['testimonial'] as $i => $testimonial ) : ?>
 				<div class="item">
-					<?php if ( ! empty( $testimonial['testimonial_texteditor'] ) ) : ?>
-						<div class="testimonial-details margin-bottom-20"><?php echo  $testimonial['testimonial_texteditor'] ; ?></div>
-					<?php endif; ?>
-					<?php if ( ! empty( $testimonial['testimonial_name'] ) ) : ?>
-						<h4><span><?php echo esc_html( $testimonial['testimonial_name'] ); ?></span></h4>
-					<?php endif; ?>
 					<?php
 					$profile_picture = $testimonial['testimonial_profile_picture'];
 					$profile_picture_fallback = $testimonial['profile_picture_fallback'];
@@ -24,9 +18,17 @@
 						$profile_picture_fallback
 					);
 					if ( ! empty( $image_details ) ) {
-						echo '<img src="' . esc_url( $image_details[0] ) . '" class="img-circle center-block" />';
+						echo '<img src="' . esc_url( $image_details[0] ) . '" class="img-circle-test center-block" />';
 					}
 					?>
+
+					<?php if ( ! empty( $testimonial['testimonial_name'] ) ) : ?>
+						<h4><span><?php echo esc_html( $testimonial['testimonial_name'] ); ?></span></h4>
+					<?php endif; ?>
+					<?php if ( ! empty( $testimonial['testimonial_texteditor'] ) ) : ?>
+						<div class="testimonial-details margin-bottom-20"><?php echo  $testimonial['testimonial_texteditor'] ; ?></div>
+					<?php endif; ?>
+
 				</div>
 			<?php endforeach; ?>
 		</div>

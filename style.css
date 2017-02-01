@@ -48,7 +48,10 @@ p,.woocommerce-Address address {
 .text-uppercase,.page-header,.woocommerce ul.products li.product .button,.woocommerce input.button,.woocommerce-cart .cart-collaterals .cart_totals tr th,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce .cart th,.woocommerce table.shop_table th{
 	text-transform: uppercase;
 }
-.page-header{
+.page-header {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #e27763;
+	width: 20%;
 	margin:0 0 20px;
 }
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
@@ -72,10 +75,9 @@ p,.woocommerce-Address address {
 	letter-spacing: 1px;
 	padding: 6px 0 5px 0;
 }
-.breadcrumb-wrap{
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	padding: 2px 0;
+.breadcrumb-wrap {
+	background: #062b43;
+	padding: 20px 0px;
 }
 .breadcrumb>li+li:before {
 	padding: 0 10px;
@@ -293,6 +295,14 @@ header,.sticky .header-bottom{
 	font-size:24px;
 	margin-bottom:-15px;
 }
+header h3{
+	display: none;
+}
+
+header h1{
+	display: none;
+}
+
 /********************************************************
     ## Contact Form
 ********************************************************/
@@ -383,6 +393,9 @@ header,.sticky .header-bottom{
 	display: inline-block;
 	margin-top: 20px;
 }
+textarea.form-control {
+	border: 1px solid #e27763;
+}
 /********************************************************
     ## Article
 ********************************************************/
@@ -447,6 +460,32 @@ header,.sticky .header-bottom{
 .img-circle {
     border-radius: 0%;
 }
+.center-block {
+	padding: 10px 8px;
+}
+.img-circle-test{
+	border-radius: 100%;
+	border: 3px solid #e27763;
+}
+.test-monial h1, .test-monial h4, .test-monial p{
+	color:#fff;
+	border-bottom: none;
+}
+.test-monial h4{
+	padding: 10px 0px;
+}
+.news-letter .form-control{
+	background: transparent;
+	border: 1px solid #e27763;
+	padding: 20px;
+}
+.news-letter h2, .news-letter p{
+	color:#fff;
+}
+.form-control::-webkit-input-placeholder {
+	color: #fff;
+}
+
 /********************************************************
     ## WooCommerce
 ********************************************************/

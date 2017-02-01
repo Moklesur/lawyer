@@ -12,21 +12,6 @@
 ?>
 
 <footer class="footer-main">
-	<!--------------- Footer Top ---------------->
-	<section class="footer-top">
-		<div class="container">
-			<div class="row">
-				<!--------------- Footer Social ---------------->
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<?php do_action('themetim_footer_social'); ?>
-				</div>
-				<!--------------- Footer Newsletter ---------------->
-				<div class="col-md-6 col-sm-6 col-xs-12 newsletter text-right">
-					<?php do_action('themetim_footer_newsletter');?>
-				</div>
-			</div>
-		</div>
-	</section>
 	<!--------------- Footer Middle ---------------->
 	<section class="footer-middle">
         <div class="container">
