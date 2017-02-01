@@ -66,4 +66,4 @@ class Themetim_Brand_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'themetim-brand-widget', __FILE__, 'Themetim_Brand_Widget' );
+siteorigin_widget_register( 'themetim-pricing-widget', __FILE__, 'Themetim_Brand_Widget' );
