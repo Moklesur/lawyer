@@ -447,6 +447,20 @@ header,.sticky .header-bottom{
 .img-circle {
     border-radius: 0%;
 }
+.center-block {
+	padding: 10px 8px;
+}
+.img-circle-test{
+	border-radius: 100%;
+	border: 3px solid #e27763;
+}
+.test-monial h1, .test-monial h4, .test-monial p{
+	color:#fff;
+	border-bottom: none;
+}
+.test-monial h4{
+	padding: 10px 0px;
+}
 /********************************************************
     ## WooCommerce
 ********************************************************/
