@@ -128,7 +128,7 @@ add_action( 'themetim_footer_newsletter', 'footer_newsletter' );
 function middle_footer_description(){
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_text_heading','About'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_text_heading','Lawyer'); ?></h4>
         <p><?php echo get_theme_mod('middle_footer_text','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'); ?></p>
     </div>
     <?php
@@ -141,7 +141,7 @@ add_action( 'themetim_middle_footer_description', 'middle_footer_description' );
 function middle_footer_nav_1(){
     ?>
     <div class="col-md-2 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_1','The Service'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_1','Pages'); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-1' ) ) :
             wp_nav_menu( array( 'theme_location' => 'footer-1', 'menu_class' => 'list-unstyled text-capitalize', 'menu_id' => 'primary-menu','container' => '' ) );
@@ -159,7 +159,7 @@ add_action( 'themetim_middle_footer_nav_1', 'middle_footer_nav_1' );
 function middle_footer_nav_2(){
     ?>
     <div class="col-md-2 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Information'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Main office'); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-2' ) ) :
             wp_nav_menu( array( 'theme_location' => 'footer-2', 'menu_class' => 'list-unstyled text-capitalize', 'menu_id' => 'primary-menu','container' => '' ) );
@@ -178,7 +178,7 @@ add_action( 'themetim_middle_footer_nav_2', 'middle_footer_nav_2' );
 function middle_footer_nav_3(){
     ?>
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_3','Follow Us'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_3','Irvine Office'); ?></h4>
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.moklesur.info%2F&tabs=timeline&width=340&height=200&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=446495938799816" width="100%" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </div>
     <?php
