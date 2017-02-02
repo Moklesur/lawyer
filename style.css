@@ -51,7 +51,7 @@ p,.woocommerce-Address address {
 .page-header {
 	padding-bottom: 10px;
 	border-bottom: 2px solid #e27763;
-	width: 20%;
+	width: 100%;
 	margin:0 0 20px;
 }
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
@@ -295,12 +295,24 @@ header,.sticky .header-bottom{
 	font-size:24px;
 	margin-bottom:-15px;
 }
-header h3{
-	display: none;
+
+.team-area .themetim-team-member{
+	background: #fff;
+	padding: 40px 20px;
+	border: 2px solid #062b43;
+}
+.team-area .themetim-team-member:hover{
+	background: #e27763;
+	border: 2px solid #e27763;
+	color:#fff;
+}
+.practies-area h1, .practies-area p{
+	color:#fff;
 }
 
-header h1{
-	display: none;
+.law-rules h1{
+	font-size: 18px;
+	margin-bottom: -15px;
 }
 
 /********************************************************
@@ -329,7 +341,7 @@ header h1{
 	padding-bottom: 0;
 }
 .widget-area section{
-	background: #f9f9f9;
+	background: rgb(247, 247, 247);
 	padding: 15px;
 	margin-bottom: 30px;
 }
