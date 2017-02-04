@@ -322,10 +322,11 @@ header,.sticky .header-bottom{
 	margin-top: 5px;
 }
 .wpcf7 .wpcf7-submit{
-	width: auto;
-	padding: 2px 25px;
-	height: inherit;
-	letter-spacing: 1px;
+    width: auto;
+    padding: 5px 40px;
+    height: inherit;
+    letter-spacing: 1px;
+    border: 1px solid #e27763;
 }
 /********************************************************
     ## Blog
@@ -812,10 +813,9 @@ textarea.form-control {
 }
 .footer-middle{
 	background: #062b43;
-	padding-bottom: 40px;
 }
 .footer-middle h4{
-	margin-top: 40px;
+	margin-top: 80px;
 	color:#fff;
 }
 .footer-middle li a{

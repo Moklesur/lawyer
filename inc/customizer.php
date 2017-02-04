@@ -591,7 +591,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_2', array(
-		'default'           => 'Main office',
+		'default'           => 'Office Information',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -780,7 +780,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_text_color',
 		array(
-			'default'           => '#000',
+			'default'           => '#333',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -798,7 +798,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'heading_color',
 		array(
-			'default'           => '#052134',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
