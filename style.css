@@ -61,9 +61,11 @@ p,.woocommerce-Address address {
 }
 .header-info{
 	color:#fff;
+	padding-top: 10px;
 }
 .header-social .fa{
     color:#fff;
+	padding-top: 10px;
 }
 .badge{
 	padding: 0;
@@ -264,10 +266,16 @@ header,.sticky .header-bottom{
 .owl-next{
 	float: right;
 }
+.glyphicon{
+	color:#fff;
+}
 
 /********************************************************
     ## Home
 ********************************************************/
+.logo{
+	margin-top: 5px;
+}
 .testimonial-thumb img{
 	border-radius: 100%;
 }
@@ -322,6 +330,28 @@ header,.sticky .header-bottom{
 	margin-bottom: -15px;
 }
 
+
+.themetim-team-list{
+	background: #e27763;
+	padding: 20px;
+	margin: 10px 10px;
+	width: 31.5%;
+}
+.themetim-team-list h3, .themetim-team-list p{
+	color:#fff;
+}
+
+.legal-service .btn-default{
+	background: none;
+	color: #e27763;
+	border: none;
+	text-decoration: underline;
+}
+.legal-service .btn-default:hover{
+	background: none;
+	border:1px solid #e27763;
+	text-decoration:none;
+}
 /********************************************************
     ## Contact Form
 ********************************************************/
@@ -506,6 +536,10 @@ textarea.form-control {
 	color: #fff;
 }
 
+
+.service_left h4, .service_left p{
+	color:#fff;
+}
 /********************************************************
     ## WooCommerce
 ********************************************************/
