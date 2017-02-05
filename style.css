@@ -1,9 +1,9 @@
 /*
-Theme Name: ThemeTim WordPress Framework
-Theme URI: http://themetim.com/
+Theme Name: Lawyer Responsive WordPress Theme
+Theme URI: https://github.com/Moklesur/lawyer
 Author: themetim.com
 Author URI: http://themetim.com/
-Description: ThemeTim is responsive woocommerce integrated theme which is designed subtle and prevailing. Ideal for featuring ThemeTim products and techniques. It has ThemeTim optimized for best practice SEO with visual page builder integration.
+Description: Lawyer is responsive woocommerce integrated theme which is designed subtle and prevailing. Ideal for featuring Lawyer products and techniques. It has Lawyer optimized for best practice SEO with visual page builder integration.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -54,12 +54,14 @@ p,.woocommerce-Address address {
 	width: 100%;
 	margin:0 0 20px;
 }
-.margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
+.margin-null, .woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
 	margin: 0;
-	color: #ffffff;
+	color: #3e3e3e;
 
 }
-
+.header-info{
+	color:#fff;
+}
 .header-social .fa{
     color:#fff;
 }
@@ -803,7 +805,7 @@ textarea.form-control {
 .footer-top{
 	background: #052134;
 }
-.footer-social a{
+.footer-top .footer-social a{
 	margin-top: 10px;
 	border: 1px solid;
 	padding: 5px 9px;
@@ -816,14 +818,14 @@ textarea.form-control {
 	margin-top: 3px;
 	color:#fff;
 }
-.footer-middle{
+.footer-top{
 	background: #062b43;
 }
-.footer-middle h4{
+.footer-top h4{
 	margin-top: 80px;
 	color:#fff;
 }
-.footer-middle li a{
+.footer-top li a{
 	padding: 5px 0;
     color: #fff;
 }
@@ -841,6 +843,16 @@ textarea.form-control {
 }
 .footer-bottom li a:hover, .footer-bottom li a:active{
     color: #f04d2f;
+}
+.footer-social p{
+	color:#fff;
+}
+
+.blog_footer a{
+	color:#fff;
+}
+.blog_thm .entry-thumb{
+	padding-bottom: 15px;
 }
 /********************************************************
     ## Miscellaneous

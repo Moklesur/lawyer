@@ -68,6 +68,36 @@ add_action( 'themetim_header_account', 'header_account' );
  * Footer
  ********************************************************/
 /**
+ * Footer Newsletter
+ */
+function footer_newsletter(){
+    if(get_theme_mod('newsletter_footer_enable','1')){
+        ?>
+        <form class="form-inline margin-top-xs-20" action="<?php echo get_theme_mod('top_footer_newsletter_url','https://www.yourmailchimpurl.com'); ?>" method="post" target="_blank">
+            <div class="form-group">
+                <h3 class="margin-clear padding-clear pull-left"><?php echo get_theme_mod('top_footer_newsletter_title','Newsletter'); ?></h3>
+                <input type="email" class="form-control" name="newsletter-email" id="newsletter-email" placeholder="info@yoursite.com" required="">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    <?php }
+}
+add_action( 'themetim_footer_newsletter', 'footer_newsletter' );
+
+/**
+ * Middle Footer Description
+ */
+function middle_footer_description(){
+    ?>
+
+        <h4><?php echo get_theme_mod('middle_footer_text_heading','Lawyer'); ?></h4>
+        <p><?php echo get_theme_mod('middle_footer_text','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'); ?></p>
+
+    <?php
+}
+add_action( 'themetim_middle_footer_description', 'middle_footer_description' );
+
+/**
  * Footer Social
  */
 function footer_social() {
@@ -105,35 +135,6 @@ function footer_social() {
     endif;
 }
 add_action( 'themetim_footer_social', 'footer_social' );
-/**
- * Footer Newsletter
- */
-function footer_newsletter(){
-    if(get_theme_mod('newsletter_footer_enable','1')){
-        ?>
-        <form class="form-inline margin-top-xs-20" action="<?php echo get_theme_mod('top_footer_newsletter_url','https://www.yourmailchimpurl.com'); ?>" method="post" target="_blank">
-            <div class="form-group">
-                <h3 class="margin-clear padding-clear pull-left"><?php echo get_theme_mod('top_footer_newsletter_title','Newsletter'); ?></h3>
-                <input type="email" class="form-control" name="newsletter-email" id="newsletter-email" placeholder="info@yoursite.com" required="">
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </div>
-        </form>
-    <?php }
-}
-add_action( 'themetim_footer_newsletter', 'footer_newsletter' );
-
-/**
- * Middle Footer Description
- */
-function middle_footer_description(){
-    ?>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_text_heading','Lawyer'); ?></h4>
-        <p><?php echo get_theme_mod('middle_footer_text','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'); ?></p>
-    </div>
-    <?php
-}
-add_action( 'themetim_middle_footer_description', 'middle_footer_description' );
 
 /**
  * Middle Footer Nav 1
@@ -159,12 +160,11 @@ add_action( 'themetim_middle_footer_nav_1', 'middle_footer_nav_1' );
 function middle_footer_nav_2(){
     ?>
     <div class="col-md-2 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Office Information'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Contact Information'); ?></h4>
         <?php
-        if ( has_nav_menu( 'footer-2' ) ) :
-            wp_nav_menu( array( 'theme_location' => 'footer-2', 'menu_class' => 'list-unstyled text-capitalize', 'menu_id' => 'primary-menu','container' => '' ) );
-        else: echo '<p class="text-capitalize">Please select <a href="/wp-admin/nav-menus.php" class="text-muted">Footer Nav 2</a> </p>';
-        endif;
+        echo get_theme_mod('middle_footer_contact_info','<p><i class="fa fa-map-marker"></i> West SM, Kam 7950 BD</p>
+        <p><i class="fa fa-phone"></i> +880 158 0000</p>
+        <p><i class="fa fa-envelope"></i> info@info.com</p>');
         ?>
     </div>
     <?php
@@ -175,12 +175,41 @@ add_action( 'themetim_middle_footer_nav_2', 'middle_footer_nav_2' );
 /**
  * Middle Footer Nav 3
  */
+
 function middle_footer_nav_3(){
     ?>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_3','Irvine Office'); ?></h4>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.moklesur.info%2F&tabs=timeline&width=340&height=200&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=446495938799816" width="100%" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 ">
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_3','Blog'); ?></h4>
+        <?php
+        $query_latest_blog = new WP_Query( array(
+            'post_status'         => 'publish',
+            'posts_per_page'	  => 2
+        ) );
+        ?>
+        <div class="footer-blog-post row">
+            <div class="footer-blog-post-widget">
+                <?php
+                if ($query_latest_blog->have_posts()) :
+                    while ( $query_latest_blog->have_posts() ) : $query_latest_blog->the_post(); ?>
+                        <div class="col-md-8 col-sm-8 col-xs-12 margin-bottom-10 blog_footer">
+                            <?php the_title( sprintf( '<p class="entry-title text-capitalize margin-null"><a href="%s">', esc_url( get_permalink() ) ), '</a></p>' );
+                            ?>
+                        </div>
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="col-md-4 col-sm-4 col-xs-12 margin-bottom-10 blog_thm">
+                                <div class="entry-thumb">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-responsive" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+            </div>
+        </div>
     <?php
 }
 add_action( 'themetim_middle_footer_nav_3', 'middle_footer_nav_3' );
@@ -191,7 +220,7 @@ add_action( 'themetim_middle_footer_nav_3', 'middle_footer_nav_3' );
 function bottom_footer_copyright(){
     ?>
     <div class="col-md-6 col-sm-6 col-xs-12 site-info">
-        <p><?php echo get_theme_mod('bottom_footer_copyright','© 2016 ThemeTim. All Rights Reserved.'); ?></p>
+        <p><?php echo get_theme_mod('bottom_footer_copyright','© ThemeTim. All Rights Reserved.'); ?></p>
     </div>
     <?php
 }

@@ -519,22 +519,6 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 
-	/**
-	 * ThemeTim Divider
-	 */
-	$wp_customize->add_setting('themetim_options[divider]', array(
-			'type'              => 'divider_control',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_middle', array(
-			'label' => __('Middle Footer', 'themetidy'),
-			'section' => 'footer_settings',
-			'settings' => 'themetim_options[divider]'
-		) )
-	);
-
 	/********************* Middle Footer ************************/
 	$wp_customize->add_setting( 'middle_footer_text_enable', array(
 		'default'           => '1',
@@ -591,7 +575,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_2', array(
-		'default'           => 'Office Information',
+		'default'           => 'Contact Information',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -604,18 +588,30 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_2_enable', array(
-		'label' => __( 'Enable Nav 2', 'text_domain' ),
+		'label' => __( 'Enable Contact Info', 'text_domain' ),
 		'type' => 'checkbox',
 		'description'   => __('', 'text_domain'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_2_enable'
 	) );
+	$wp_customize->add_setting( 'middle_footer_contact_info', array(
+		'default'           => '<p><i class="fa fa-map-marker"></i> West SM, Kam 7950 BD</p>
+        <p><i class="fa fa-phone"></i> +880 158 0000</p>
+        <p><i class="fa fa-envelope"></i> info@info.com</p>',
+	) );
+	$wp_customize->add_control( 'middle_footer_contact_info', array(
+		'label' => __( 'Contact Details', 'text_domain' ),
+		'type' => 'textarea',
+		'section' => 'footer_settings',
+		'settings' => 'middle_footer_contact_info',
+		'description'   => __('', 'text_domain')
+	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_3', array(
-		'default'           => 'Irvine Office',
+		'default'           => 'Blog',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_3', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Blog Heading', 'text_domain' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_heading_3',
@@ -625,7 +621,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_3_enable', array(
-		'label' => __( 'Enable Nav 3', 'text_domain' ),
+		'label' => __( 'Enable Blog Enable', 'text_domain' ),
 		'type' => 'checkbox',
 		'description'   => __('', 'text_domain'),
 		'section' => 'footer_settings',

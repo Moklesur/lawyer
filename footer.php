@@ -12,14 +12,17 @@
 ?>
 
 <footer class="footer-main">
-	<!--------------- Footer Middle ---------------->
-	<section class="footer-middle">
+	<!--------------- Footer Top ---------------->
+	<section class="footer-top">
         <div class="container">
             <div class="row">
 				<?php
+                ?><div class="col-md-4 col-sm-6 col-xs-12 footer-social"><?php
 				if(get_theme_mod('middle_footer_text_enable','1')) :
 					do_action('themetim_middle_footer_description');
 				 endif;
+                    do_action('themetim_footer_social');
+                    ?></div><?php
 				if(get_theme_mod('middle_footer_nav_1_enable','1')) :
 					do_action('themetim_middle_footer_nav_1');
 				 endif;
