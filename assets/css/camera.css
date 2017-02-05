@@ -66,9 +66,17 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 75%;
-	padding: 210px 100px;
+	width: 60%;
+	padding: 210px 140px;
 }
+.cameraContent h1{
+	font-size: 55px;
+}
+
+.cameraContent h3{
+	font-size: 30px;
+}
+
 .cameraContent p{
 	color:#fff;
 }
@@ -457,7 +465,7 @@
     border-top-color: #e6e6e6;
 }
 .camera_prevThumbs, .camera_nextThumbs, .camera_prev, .camera_next, .camera_commands, .camera_thumbs_cont {
-	background: rgb(226, 119, 99);
+	background: #fff;
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	background: #b7b7b7;
