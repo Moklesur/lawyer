@@ -780,7 +780,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_text_color',
 		array(
-			'default'           => '#333',
+			''           => '#4A4A4A',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -798,7 +798,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'heading_color',
 		array(
-			'default'           => '#000',
+			'default'           => '#3e3e3e',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -816,7 +816,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_color',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#3e3e3e',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);

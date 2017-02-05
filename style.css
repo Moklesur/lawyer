@@ -50,14 +50,18 @@ p,.woocommerce-Address address {
 }
 .page-header {
 	padding-bottom: 10px;
-	border-bottom: 2px solid #e27763;
+	border-bottom: 2px solid #3e3e3e;
 	width: 100%;
 	margin:0 0 20px;
 }
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
 	margin: 0;
-	color: #e27763;
+	color: #ffffff;
 
+}
+
+.header-social .fa{
+    color:#fff;
 }
 .badge{
 	padding: 0;
@@ -188,6 +192,7 @@ header,.sticky .header-bottom{
 ********************************************************/
 .primary-menu ul li a{
 	padding: 15px 30px 15px 0;
+    font-weight: 700;
 }
 .main-slider{
 	margin: 0 !important;
@@ -326,7 +331,7 @@ header,.sticky .header-bottom{
     padding: 5px 40px;
     height: inherit;
     letter-spacing: 1px;
-    border: 1px solid #e27763;
+    border: 1px solid #062b43;
 }
 /********************************************************
     ## Blog
@@ -820,10 +825,22 @@ textarea.form-control {
 }
 .footer-middle li a{
 	padding: 5px 0;
+    color: #fff;
+}
+.footer-middle li a:hover, .footer-middle li a:active{
+    color: #f04d2f;
 }
 .footer-bottom{
 	padding-top: 20px;
 	background: #052134;
+}
+
+.footer-bottom li a{
+    padding: 5px 0;
+    color: #fff;
+}
+.footer-bottom li a:hover, .footer-bottom li a:active{
+    color: #f04d2f;
 }
 /********************************************************
     ## Miscellaneous
