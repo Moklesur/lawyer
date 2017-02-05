@@ -27,6 +27,11 @@
         ## Min Width 992px And Max Width 1199px
 ********************************************************/
 @media (min-width: 768px) and (max-width: 991px){
+    .primary-menu ul li a {
+        padding: 15px 15px 15px 0;
+        font-size: 10px;
+    }
+
 
 }
 /********************************************************
@@ -65,7 +70,7 @@
         position: absolute;
         float: left;
     }
-    
+
     .header-social {
         margin-bottom: 10px;
     }
@@ -103,6 +108,14 @@
         text-align: center;
     }
 
+    .cameraContent{
+        padding:50px 20px;
+        width: 100%;
+    }
+    .themetim-team-list{
+        margin-bottom:10px;
+    }
+
 }
 /********************************************************
         ## Max Width 480px
@@ -111,12 +124,54 @@
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product{
         width: 100%;
     }
+    .cameraContent{
+        padding:20px 10px;
+        width:100%;
+    }
+    h1, .legal-service h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size:18px;
+    }
+    h3{
+        font-size:16px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .themetim-team-list{
+        margin-bottom:10px;
+    }
 }
+
 /********************************************************
         Max Width 320px
 ********************************************************/
 @media only screen and (max-width:320px) {
+    .cameraContent{
+        padding:10px 5px;
+        width:100%;
+    }
+    h1, .legal-service h1{
+        font-size: 18px;
+    }
 
+    h2{
+        font-size:16px;
+    }
+    h3{
+        font-size:14px;
+    }
+    p{
+        font-size: 12px;
+        line-height: 18px;
+
+    }
+    .themetim-team-list{
+        margin-bottom:10px;
+    }
 }
 /********************************************************
         Max Width 240px

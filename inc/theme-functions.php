@@ -159,7 +159,7 @@ add_action( 'themetim_middle_footer_nav_1', 'middle_footer_nav_1' );
 function middle_footer_nav_2(){
     ?>
     <div class="col-md-2 col-sm-6 col-xs-12">
-        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Main office'); ?></h4>
+        <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Office Information'); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-2' ) ) :
             wp_nav_menu( array( 'theme_location' => 'footer-2', 'menu_class' => 'list-unstyled text-capitalize', 'menu_id' => 'primary-menu','container' => '' ) );

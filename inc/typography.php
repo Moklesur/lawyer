@@ -17,18 +17,18 @@ function themetim_typography_color($color) {
     /*
      * General Section
      */
-    $body_text_color = get_theme_mod( 'bg_text_color', '#000' );
+    $body_text_color = get_theme_mod( 'bg_text_color', '#4A4A4A' );
     $body_font_size = get_theme_mod( 'body_font_size', '14' );
     $body_font_family = get_theme_mod( 'body_font_family', 'Open Sans' );
 
 
     $color .= "body { color:" . esc_attr($body_text_color) . "; font-size: " . esc_attr($body_font_size) . "px; font-family: ". esc_attr(str_replace('+', ' ', $body_font_family)) ."} ";
 
-    $heading_color = get_theme_mod( 'heading_color', '#052134' );
+    $heading_color = get_theme_mod( 'heading_color', '#3e3e3e' );
     $heading_font_family = get_theme_mod( 'heading_font_family', 'Oswald' );
     $color .= "h1, h2, h3, h4, h5, h6 { color:" . esc_attr($heading_color) . ";font-family: ". esc_attr(str_replace('+', ' ', $heading_font_family)) ."} ";
 
-    $link_color = get_theme_mod( 'link_color', '#e27763' );
+    $link_color = get_theme_mod( 'link_color', '#3e3e3e' );
     $color .= "a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a,.woocommerce div.product .product_title,.woocommerce div.product p.price, .woocommerce div.product span.price,.woocommerce div.product form.cart .variations td.label { color:" . esc_attr($link_color) . "} ";
 
     $link_hover_color = get_theme_mod( 'link_hover_color', '#f04d2f' );
@@ -51,9 +51,9 @@ function themetim_typography_color($color) {
     /*
      * Default Button
      */
-    $btn_default_bg = get_theme_mod( 'btn_default_bg', '#e27763' );
+    $btn_default_bg = get_theme_mod( 'btn_default_bg', '#062b43' );
     $btn_default_text = get_theme_mod( 'btn_default_text', '#fff' );
-    $btn_default_border = get_theme_mod( 'btn_default_border', '#e27763' );
+    $btn_default_border = get_theme_mod( 'btn_default_border', '#062b43' );
 
     $color .= ".btn-default,.camera_wrap.main-slider .btn, .btn-default.disabled,.woocommerce ul.products li.product .button,.widget-area .search-form .search-submit,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span,.woocommerce div.product form.cart .button,.woocommerce #review_form #respond .form-submit input,.woocommerce input.button , .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce #payment #place_order ,.wpcf7-submit{ background-color:" . esc_attr($btn_default_bg) . "; color: " . esc_attr($btn_default_text) . ";border-color: " . esc_attr($btn_default_border) . "; } ";
 
@@ -66,9 +66,9 @@ function themetim_typography_color($color) {
     /*
      * Primary Button
      */
-    $btn_primary_bg = get_theme_mod( 'btn_primary_bg', '#e27763' );
+    $btn_primary_bg = get_theme_mod( 'btn_primary_bg', '#062b43' );
     $btn_primary_text = get_theme_mod( 'btn_primary_text', '#fff' );
-    $btn_primary_border = get_theme_mod( 'btn_primary_border', '#e27763' );
+    $btn_primary_border = get_theme_mod( 'btn_primary_border', '#062b43' );
 
     $color .= ".btn-primary, .btn-primary.disabled{ background-color:" . esc_attr($btn_primary_bg) . "; color: " . esc_attr($btn_primary_text) . ";border-color: " . esc_attr($btn_primary_border) . "; } ";
 
@@ -81,9 +81,9 @@ function themetim_typography_color($color) {
     /*
      * Success Button
      */
-    $btn_success_bg = get_theme_mod( 'btn_success_bg', '#e27763' );
+    $btn_success_bg = get_theme_mod( 'btn_success_bg', '#062b43' );
     $btn_success_text = get_theme_mod( 'btn_success_text', '#fff' );
-    $btn_success_border = get_theme_mod( 'btn_success_border', '#e27763' );
+    $btn_success_border = get_theme_mod( 'btn_success_border', '#062b43' );
 
     $color .= ".btn-success,.btn-success.disabled{ background-color:" . esc_attr($btn_success_bg) . "; color: " . esc_attr($btn_success_text) . ";border-color: " . esc_attr($btn_success_border) . "; } ";
 
@@ -96,8 +96,8 @@ function themetim_typography_color($color) {
     /*
      * Extra Text Color
      */
-    $text_color_1 = get_theme_mod( 'text_color_1', '#e27763' );
-    $text_color_2 = get_theme_mod( 'text_color_2', '#ccc' );
+    $text_color_1 = get_theme_mod( 'text_color_1', '#4A4A4A' );
+    $text_color_2 = get_theme_mod( 'text_color_2', '#4A4A4A' );
 
     $color .= ".text-color-1{ color: " . esc_attr($text_color_1) . "; } ";
     $color .= ".text-color-2{ color: " . esc_attr($text_color_2) . "; } ";
@@ -105,8 +105,8 @@ function themetim_typography_color($color) {
     /*
      * Extra Background Color
      */
-    $bg_color_1 = get_theme_mod( 'bg_color_1', '#e27763' );
-    $bg_color_2 = get_theme_mod( 'bg_color_2', '#ccc' );
+    $bg_color_1 = get_theme_mod( 'bg_color_1', '#4A4A4A' );
+    $bg_color_2 = get_theme_mod( 'bg_color_2', '#4A4A4A' );
 
     $color .= ".background-1{ background-color: " . esc_attr($bg_color_1) . "; } ";
     $color .= ".background-1{ background-color: " . esc_attr($bg_color_2) . "; } ";
