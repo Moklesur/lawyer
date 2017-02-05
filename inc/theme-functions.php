@@ -12,7 +12,7 @@
  */
 function header_social() {
 
-    if(get_theme_mod('social_header_enable')) :
+    if(get_theme_mod('social_header_enable','1')) :
         ?>
         <ul class="list-inline header-social">
             <?php
