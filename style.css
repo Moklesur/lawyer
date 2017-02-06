@@ -272,6 +272,10 @@ header,.sticky .header-bottom{
 .glyphicon{
 	color:#fff;
 }
+.glyphicon:hover{
+    color:#f04d2f;
+}
+
 
 /********************************************************
     ## Home
@@ -347,14 +351,13 @@ header,.sticky .header-bottom{
 }
 .legal-service .btn-default{
 	background: none;
-	color: #e27763;
+	color: #3e3e3e;
 	border: none;
 	text-decoration: underline;
 }
 .legal-service .btn-default:hover{
 	background: none;
-	border:1px solid #e27763;
-	text-decoration:none;
+    color: #e27763;
 }
 /********************************************************
     ## Contact Form
@@ -842,6 +845,7 @@ textarea.form-control {
 ********************************************************/
 .footer-top{
 	background: #052134;
+    padding:50px 0px;
 }
 .footer-top .footer-social a{
 	margin-top: 10px;
@@ -860,7 +864,6 @@ textarea.form-control {
 	background: #062b43;
 }
 .footer-top h4{
-	margin-top: 50px;
 	color:#fff;
 }
 .footer-top li a{

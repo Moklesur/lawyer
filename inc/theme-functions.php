@@ -89,7 +89,7 @@ add_action( 'themetim_footer_newsletter', 'footer_newsletter' );
  */
 function middle_footer_description(){
     ?>
-
+    <div class="col-md-4 col-sm-6 col-xs-12 padding-bottom-10 margin-bottom-10">
         <h4><?php echo get_theme_mod('middle_footer_text_heading','Lawyer'); ?></h4>
         <p><?php echo get_theme_mod('middle_footer_text','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'); ?></p>
 
@@ -131,6 +131,7 @@ function footer_social() {
             }
             ?>
         </ul>
+        </div>
         <?php
     endif;
 }
@@ -141,7 +142,7 @@ add_action( 'themetim_footer_social', 'footer_social' );
  */
 function middle_footer_nav_1(){
     ?>
-    <div class="col-md-2 col-sm-6 col-xs-12">
+    <div class="col-md-2 col-sm-6 col-xs-12 padding-bottom-10 margin-bottom-10">
         <h4><?php echo get_theme_mod('middle_footer_nav_heading_1','Pages'); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-1' ) ) :
@@ -159,7 +160,7 @@ add_action( 'themetim_middle_footer_nav_1', 'middle_footer_nav_1' );
  */
 function middle_footer_nav_2(){
     ?>
-    <div class="col-md-2 col-sm-6 col-xs-12">
+    <div class="col-md-3 col-sm-6 col-xs-12 padding-bottom-10 margin-bottom-10">
         <h4><?php echo get_theme_mod('middle_footer_nav_heading_2','Contact Information'); ?></h4>
         <?php
         echo get_theme_mod('middle_footer_contact_info','<p><i class="fa fa-map-marker"></i> West SM, Kam 7950 BD</p>
@@ -178,7 +179,7 @@ add_action( 'themetim_middle_footer_nav_2', 'middle_footer_nav_2' );
 
 function middle_footer_nav_3(){
     ?>
-    <div class="col-md-4 col-sm-6 col-xs-12 ">
+    <div class="col-md-3 col-sm-6 col-xs-12 padding-bottom-10 margin-bottom-10 ">
         <h4><?php echo get_theme_mod('middle_footer_nav_heading_3','Blog'); ?></h4>
         <?php
         $query_latest_blog = new WP_Query( array(
