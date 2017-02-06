@@ -12,7 +12,7 @@
  */
 function header_social() {
 
-    if(get_theme_mod('social_header_enable')) :
+    if(get_theme_mod('social_header_enable','1')) :
         ?>
         <ul class="list-inline header-social">
             <?php
@@ -194,6 +194,7 @@ function middle_footer_nav_3(){
                     while ( $query_latest_blog->have_posts() ) : $query_latest_blog->the_post(); ?>
                         <div class="col-md-8 col-sm-8 col-xs-12 margin-bottom-10 blog_footer">
                             <?php the_title( sprintf( '<p class="entry-title text-capitalize margin-null"><a href="%s">', esc_url( get_permalink() ) ), '</a></p>' );
+                             the_time('M j, Y');
                             ?>
                         </div>
                         <?php if ( has_post_thumbnail() ) : ?>
