@@ -23,7 +23,7 @@
 <div class="preloader animsition">
 <header class="header">
 	<!--------------- Header Top ---------------->
-	<section class="header-top padding-top-10 padding-bottom-10 text-center-xs">
+	<section class="header-top padding-top-10 text-center-xs">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-12">

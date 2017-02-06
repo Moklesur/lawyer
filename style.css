@@ -61,11 +61,14 @@ p,.woocommerce-Address address {
 }
 .header-info{
 	color:#fff;
-	padding-top: 10px;
+	padding-top: 5px;
 }
 .header-social .fa{
     color:#fff;
-	padding-top: 10px;
+	padding-top: 5px;
+}
+.header-social .fa:hover{
+    color:#f04d2f;
 }
 .badge{
 	padding: 0;
@@ -141,13 +144,13 @@ p,.woocommerce-Address address {
 .woocommerce ul.products li.product .price del,.margin-right-10{
 	margin-right: 10px;
 }
-.display-inline-b,.header-top .header-social a,.footer-social a,.footer-middle li a,.woocommerce ul.products li.product .price del,.owl-nav>div,.wpcf7-form-control-wrap{
+.display-inline-b,.header-top .header-social a,.footer-social a,.footer-top li a,.woocommerce ul.products li.product .price del,.owl-nav>div,.wpcf7-form-control-wrap{
 	display: inline-block;
 }
 .overflow,.woocommerce ul.products li.product .price{
 	overflow: hidden;
 }
-.full-width,.footer-middle li a,.woocommerce .related .products .product-fix,.blog-article .calendar_wrap,.woocommerce-Reviews input,.wpcf7 label, .wpcf7 input, .wpcf7 select, .wpcf7 textarea,.wpcf7-form-control-wrap,.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.widget-area .search-form label,.widget-area .search-form .search-field,.reply,.product-fix .product-hover,.product-fix .product-image .background-overlay,.woocommerce div.product form.cart .variations td,.woocommerce div.product form.cart .variations td.label,.woocommerce div.product form.cart .variations select,.sku_wrapper,.posted_in{
+.full-width,.footer-top li a,.woocommerce .related .products .product-fix,.blog-article .calendar_wrap,.woocommerce-Reviews input,.wpcf7 label, .wpcf7 input, .wpcf7 select, .wpcf7 textarea,.wpcf7-form-control-wrap,.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.widget-area .search-form label,.widget-area .search-form .search-field,.reply,.product-fix .product-hover,.product-fix .product-image .background-overlay,.woocommerce div.product form.cart .variations td,.woocommerce div.product form.cart .variations td.label,.woocommerce div.product form.cart .variations select,.sku_wrapper,.posted_in{
 	width: 100%;
 }
 .position-relative{
@@ -314,11 +317,9 @@ header,.sticky .header-bottom{
 .team-area .themetim-team-member{
 	background: #fff;
 	padding: 40px 20px;
-	border: 2px solid #062b43;
 }
 .team-area .themetim-team-member:hover{
 	background: #e27763;
-	border: 2px solid #e27763;
 	color:#fff;
 }
 .practies-area h1, .practies-area p{
@@ -341,6 +342,9 @@ header,.sticky .header-bottom{
 	color:#fff;
 }
 
+.our_team h3{
+    color:#3e3e3e;
+}
 .legal-service .btn-default{
 	background: none;
 	color: #e27763;
@@ -856,14 +860,17 @@ textarea.form-control {
 	background: #062b43;
 }
 .footer-top h4{
-	margin-top: 80px;
+	margin-top: 50px;
 	color:#fff;
 }
 .footer-top li a{
 	padding: 5px 0;
     color: #fff;
 }
-.footer-middle li a:hover, .footer-middle li a:active{
+.footer-top li a:hover, .footer-top li a:active{
+    color: #f04d2f;
+}
+.footer-social ul li a:hover{
     color: #f04d2f;
 }
 .footer-bottom{
