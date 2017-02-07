@@ -53,10 +53,6 @@
 				</div>
 				<div class="col-md-9 col-sm-8 col-xs-12">
 				<nav class="navbar navbar-default text-uppercase primary-menu">
-
-
-
-
 					<div class="navbar-header">
 						<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
 							<span class="icon-bar"></span>
@@ -64,10 +60,10 @@
 							<span class="icon-bar"></span>
 						</button>
 					</div>
-					<div id="navbar-collapse" class="navbar-collapse collapse">
+					<div id="navbar-collapse" class="navbar-collapse collapse padding-null">
 						<?php
 						if ( has_nav_menu( 'primary' ) ) :
-							wp_nav_menu( array('menu' => 'primary', 'theme_location' => 'primary', 'depth'             => 5, 'container' => '', 'menu_id' => 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker()));
+							wp_nav_menu( array('menu' => 'primary', 'theme_location' => 'primary', 'depth'             => 5, 'container' => '', 'menu_id' => 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav pull-right', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker()));
 						else: echo '<p class="margin-top-10 pull-left text-capitalize">Please select <a href="/wp-admin/nav-menus.php" class="text-muted">Primary Menu</a> </p>';
 						endif;
 						?>

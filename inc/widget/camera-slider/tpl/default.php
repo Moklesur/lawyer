@@ -37,7 +37,7 @@
 				loader: 'bar',
 				margin:'',
 				alignment: 'center',
-				barPosition: 'top',
+				barPosition: 'bottom',
 				thumbnails: false,
 				playPause: false,
 				loaderColor: '#fff',
