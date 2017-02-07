@@ -326,28 +326,17 @@ header,.sticky .header-bottom{
 	background: #e27763;
 	color:#fff;
 }
+
+.team-area h3 span{
+	color:#3e3e3e;
+}
 .practies-area h1, .practies-area p{
 	color:#fff;
 }
 
-.law-rules h1{
+.law-rules h1 {
 	font-size: 18px;
 	margin-bottom: -15px;
-}
-
-
-.themetim-team-list{
-	background: #e27763;
-	padding: 20px;
-	margin: 10px 10px;
-	width: 31.5%;
-}
-.themetim-team-list h3, .themetim-team-list p{
-	color:#fff;
-}
-
-.our_team h3{
-    color:#3e3e3e;
 }
 .legal-service .btn-default{
 	background: none;
@@ -359,6 +348,11 @@ header,.sticky .header-bottom{
 	background: none;
     color: #e27763;
 }
+
+.our_team h1, .our_team h3, .our_team p{
+	color:#fff;
+}
+
 /********************************************************
     ## Contact Form
 ********************************************************/
@@ -504,16 +498,6 @@ textarea.form-control {
     top: 50%;
 }
 
-.team-content{
-    text-align: center;
-    padding: 0px 10px;
-}
-.team-content p{
-    padding: 0px 10px;
-}
-.team-content h4{
-    padding-top: 10px;
-}
 .img-circle {
     border-radius: 0%;
 }
