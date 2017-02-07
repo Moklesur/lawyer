@@ -198,7 +198,7 @@ header,.sticky .header-bottom{
     ## Menu, Slider
 ********************************************************/
 .primary-menu ul li a{
-	padding: 15px 30px 15px 0;
+	padding: 18px 30px 13px 0;
     font-weight: 700;
 }
 .main-slider{
@@ -281,7 +281,7 @@ header,.sticky .header-bottom{
     ## Home
 ********************************************************/
 .logo{
-	margin-top: 5px;
+	margin-top: 8px;
 }
 .testimonial-thumb img{
 	border-radius: 100%;

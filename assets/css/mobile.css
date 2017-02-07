@@ -90,16 +90,17 @@
         padding: 15px;
     }
     .navbar-default .navbar-toggle{
-
+        margin-right: 0;
+        border-color: #e27763;
     }
     .navbar-default .navbar-toggle .icon-bar{
-
+        background-color: #e27763;
     }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-
+        background-color: #e27763;
     }
     .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
-
+        background-color: #fff;
     }
     .woocommerce .product-fix .compare, .woocommerce .product-fix .yith-wcqv-button{
         visibility: visible;
@@ -120,31 +121,38 @@
         margin-bottom:10px;
         width: 100%;
     }
+    .cameraContent h1 {
+        font-size: 30px;
+        line-height: inherit;
+    }
+    .sticky .header-middle, .sticky .header-top{
+        display: block;
+    }
+    .sticky .header-bottom {
+        position: relative;
+    }
+    .logo{
+        position: absolute;
+        z-index:1;
+    }
 }
 
 /********************************************************
         ## Max Width 480px
 ********************************************************/
 @media only screen and (max-width:480px) {
+    .slider-details{
+        display: none;
+    }
+    .cameraContent h1 ,.cameraContent h3{
+        font-size: 28px;
+        line-height: inherit;
+    }
+    .cameraContent h3 {
+        font-size: 22px;
+    }
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product{
         width: 100%;
-    }
-    .cameraContent{
-        padding:20px 10px;
-        width:100%;
-    }
-    h1, .legal-service h1{
-        font-size: 24px;
-    }
-    h2{
-        font-size:18px;
-    }
-    h3{
-        font-size:16px;
-    }
-    p{
-        font-size: 14px;
-        line-height: 20px;
     }
     .themetim-team-list{
         margin-bottom:10px;
@@ -160,36 +168,6 @@
         Max Width 320px
 ********************************************************/
 @media only screen and (max-width:320px) {
-    .cameraContent {
-        padding: 10px 5px;
-        width: 100%;
-    }
-
-    h1, .legal-service h1 {
-        font-size: 18px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    h3 {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 12px;
-        line-height: 18px;
-
-    }
-
-    .themetim-team-list {
-        margin-bottom: 10px;
-        width: 100%;
-    }
-    .themetim-portfolio-list{
-        width:100%;
-    }
 
 }
 

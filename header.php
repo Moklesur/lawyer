@@ -51,8 +51,12 @@
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'description' ); ?></a></p>
 					<?php endif ?>
 				</div>
-				<div class="col-md-9 col-sm-8 col-xs-12 logo">
+				<div class="col-md-9 col-sm-8 col-xs-12">
 				<nav class="navbar navbar-default text-uppercase primary-menu">
+
+
+
+
 					<div class="navbar-header">
 						<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
 							<span class="icon-bar"></span>
