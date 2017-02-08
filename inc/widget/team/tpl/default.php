@@ -14,18 +14,18 @@
 					$profile_picture_fallback = $team['profile_picture_fallback'];
 					$image_details = siteorigin_widgets_get_attachment_image_src(
 						$profile_picture,
-						'',
+						'thumbnail',
 						$profile_picture_fallback
 					);
 					if ( ! empty( $image_details ) ) {
-						echo '<img src="' . esc_url( $image_details[0] ) . '" class="img-responsive" alt="" />';
+						echo '<img src="' . esc_url( $image_details[0] ) . '" class="img-circle" />';
 					}
 					?>
 				</div><!-- .themetim-image-container -->
 				<div class="themetim-info-container">
 					<div class="">
 						<?php if ( ! empty( $team['team_title'] ) ) : ?>
-							<h3><span><?php echo esc_html( $team['team_title'] ); ?></span></h3>
+							<h4><span><?php echo esc_html( $team['team_title'] ); ?></span></h4>
 						<?php endif; ?>
 						<?php if ( ! empty( $team['team_price'] ) ) : ?>
 							<p><span><?php echo esc_html( $team['team_price'] ); ?></span></p>

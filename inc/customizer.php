@@ -519,6 +519,22 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 
+	/**
+	 * ThemeTim Divider
+	 */
+	$wp_customize->add_setting('themetim_options[divider]', array(
+			'type'              => 'divider_control',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_attr',
+		)
+	);
+	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_middle', array(
+			'label' => __('Middle Footer', 'themetidy'),
+			'section' => 'footer_settings',
+			'settings' => 'themetim_options[divider]'
+		) )
+	);
+
 	/********************* Middle Footer ************************/
 	$wp_customize->add_setting( 'middle_footer_text_enable', array(
 		'default'           => '1',
@@ -532,7 +548,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_text_heading', array(
-		'default'           => 'Lawyer',
+		'default'           => 'About',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_heading', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -554,7 +570,7 @@ function themetim_customize_register( $wp_customize ) {
 
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_1', array(
-		'default'           => 'Pages',
+		'default'           => 'The Service',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_1', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -575,7 +591,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_2', array(
-		'default'           => 'Contact Information',
+		'default'           => 'Information',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
 		'label' => __( 'Heading', 'text_domain' ),
@@ -588,30 +604,18 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_2_enable', array(
-		'label' => __( 'Enable Contact Info', 'text_domain' ),
+		'label' => __( 'Enable Nav 2', 'text_domain' ),
 		'type' => 'checkbox',
 		'description'   => __('', 'text_domain'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_2_enable'
 	) );
-	$wp_customize->add_setting( 'middle_footer_contact_info', array(
-		'default'           => '<p><i class="fa fa-map-marker"></i> West SM, Kam 7950 BD</p>
-        <p><i class="fa fa-phone"></i> +880 158 0000</p>
-        <p><i class="fa fa-envelope"></i> info@info.com</p>',
-	) );
-	$wp_customize->add_control( 'middle_footer_contact_info', array(
-		'label' => __( 'Contact Details', 'text_domain' ),
-		'type' => 'textarea',
-		'section' => 'footer_settings',
-		'settings' => 'middle_footer_contact_info',
-		'description'   => __('', 'text_domain')
-	) );
 
 	$wp_customize->add_setting( 'middle_footer_nav_heading_3', array(
-		'default'           => 'Blog',
+		'default'           => 'Follow Us',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_3', array(
-		'label' => __( 'Blog Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'text_domain' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_heading_3',
@@ -621,7 +625,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_3_enable', array(
-		'label' => __( 'Enable Blog Enable', 'text_domain' ),
+		'label' => __( 'Enable Nav 3', 'text_domain' ),
 		'type' => 'checkbox',
 		'description'   => __('', 'text_domain'),
 		'section' => 'footer_settings',
@@ -776,7 +780,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_text_color',
 		array(
-			''           => '#4A4A4A',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -794,7 +798,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'heading_color',
 		array(
-			'default'           => '#3e3e3e',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -812,7 +816,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_color',
 		array(
-			'default'           => '#3e3e3e',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -830,7 +834,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_hover_color',
 		array(
-			'default'           => '#f04d2f',
+			'default'           => '#555',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -882,7 +886,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_text_color',
 		array(
-			'default'           => '#052134',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -917,7 +921,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'footer_bg_color',
 		array(
-			'default'           => '#000',
+			'default'           => '#ddd',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -935,7 +939,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'footer_text_color',
 		array(
-			'default'           => '#fff',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -969,7 +973,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_bg',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#fff',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -988,7 +992,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_text',
 		array(
-			'default'           => '#fff',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1006,7 +1010,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_border',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1025,7 +1029,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_bg_hover',
 		array(
-			'default'           => '#fff',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1043,7 +1047,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_text_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#fff',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1061,7 +1065,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_default_border_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1095,7 +1099,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_primary_bg',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1131,7 +1135,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_primary_border',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1167,7 +1171,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_primary_text_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1185,7 +1189,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_primary_border_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1209,7 +1213,6 @@ function themetim_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'esc_attr',
 		)
 	);
-
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'success', array(
 			'label' => __('Primary Button', 'themetidy'),
 			'section' => 'colors',
@@ -1220,7 +1223,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_success_bg',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1256,7 +1259,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_success_border',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1292,7 +1295,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_success_text_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1310,7 +1313,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'btn_success_border_hover',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#fff',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1344,7 +1347,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'text_color_1',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#000',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1395,7 +1398,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_color_1',
 		array(
-			'default'           => '#e27763',
+			'default'           => '#fff',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -1441,7 +1444,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'body_font_family',
 		array(
-			'default' => 'Open Sans Light',
+			'default' => 'Open+Sans',
 			'capability'     => 'edit_theme_options'
 		)
 	);
@@ -1498,7 +1501,7 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 	$wp_customize->add_setting('heading_font_family', array(
-		'default'        => 'Oswald',
+		'default'        => 'Open+Sans',
 		'capability'     => 'edit_theme_options',
 	));
 	$wp_customize->add_control( 'heading_font_family', array(
@@ -1557,7 +1560,7 @@ function themetim_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting( 'section_gap_1', array(
-		'default'           => '40',
+		'default'           => '80',
 	) );
 	$wp_customize->add_control( 'section_gap_1', array(
 		'label' => __( 'Section Gap 1', 'text_domain' ),
@@ -1567,7 +1570,7 @@ function themetim_customize_register( $wp_customize ) {
 		'description'   => __('', 'text_domain')
 	) );
 	$wp_customize->add_setting( 'section_gap_2', array(
-		'default'           => '50',
+		'default'           => '80',
 	) );
 	$wp_customize->add_control( 'section_gap_2', array(
 		'label' => __( 'Section Gap 2', 'text_domain' ),

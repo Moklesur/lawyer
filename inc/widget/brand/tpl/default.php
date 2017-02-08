@@ -1,5 +1,5 @@
 <div class="themetim-brand brand <?php echo $instance['heading_alignment']; ?>">
-	<div class="<?php echo $instance['heading_alignment']; ?>-heading">
+	<div class="<?php echo $instance['heading_alignment']; ?>-heading margin-bottom-30">
 		<?php if ( ! empty( $instance['title'] ) ) : ?>
 			<h1 class="page-header"><?php echo esc_html( $instance['title'] ); ?></h1>
 		<?php endif; ?>
