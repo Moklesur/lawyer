@@ -24,18 +24,9 @@
     }
 }
 /********************************************************
-        ## Min Width 992px And Max Width 1199px
+        ## Min Width 768px And Max Width 991px
 ********************************************************/
 @media (min-width: 768px) and (max-width: 991px){
-    .primary-menu ul li a {
-        padding: 15px 15px 15px 0;
-        font-size: 10px;
-    }
-    .themetim-team-list{
-        margin-bottom:10px;
-        width: 47%;
-    }
-
 
 }
 /********************************************************
@@ -71,10 +62,8 @@
         text-align: center;
     }
     .logo img{
-        position: absolute;
-        float: left;
+        margin: 0 auto;
     }
-
     .header-social {
         margin-bottom: 10px;
     }
@@ -90,17 +79,16 @@
         padding: 15px;
     }
     .navbar-default .navbar-toggle{
-        margin-right: 0;
-        border-color: #e27763;
+
     }
     .navbar-default .navbar-toggle .icon-bar{
-        background-color: #e27763;
+
     }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-        background-color: #e27763;
+
     }
     .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
-        background-color: #fff;
+
     }
     .woocommerce .product-fix .compare, .woocommerce .product-fix .yith-wcqv-button{
         visibility: visible;
@@ -113,68 +101,21 @@
         text-align: center;
     }
 
-    .cameraContent{
-        padding:50px 20px;
-        width: 100%;
-    }
-    .themetim-team-list{
-        margin-bottom:10px;
-        width: 100%;
-    }
-    .cameraContent h1 {
-        font-size: 30px;
-        line-height: inherit;
-    }
-    .sticky .header-middle, .sticky .header-top{
-        display: block;
-    }
-    .sticky .header-bottom {
-        position: relative;
-    }
-    .logo{
-        position: absolute;
-        z-index:1;
-    }
 }
-
 /********************************************************
         ## Max Width 480px
 ********************************************************/
 @media only screen and (max-width:480px) {
-    .slider-details{
-        display: none;
-    }
-    .cameraContent h1 ,.cameraContent h3{
-        font-size: 28px;
-        line-height: inherit;
-    }
-    .cameraContent h3 {
-        font-size: 22px;
-    }
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product{
         width: 100%;
     }
-    .themetim-team-list{
-        margin-bottom:10px;
-        width: 100%;
-    }
-    .themetim-portfolio-list{
-        width:100%;
-    }
-
 }
-
 /********************************************************
         Max Width 320px
 ********************************************************/
 @media only screen and (max-width:320px) {
-    h1{
-        line-height: 50px;
-    }
-
 
 }
-
 /********************************************************
         Max Width 240px
 ********************************************************/

@@ -3,7 +3,6 @@
 *	GENERAL
 *
 **************************/
-
 .camera_wrap a, .camera_wrap img, 
 .camera_wrap ol, .camera_wrap ul, .camera_wrap li,
 .camera_wrap table, .camera_wrap tbody, .camera_wrap tfoot, .camera_wrap thead, .camera_wrap tr, .camera_wrap th, .camera_wrap td
@@ -18,10 +17,6 @@
 	padding: 0;
 	vertical-align: baseline;
 	list-style: none
-}
-
-.camera_bar_cont{
-	background-color: rgb(226, 119, 99) !important;
 }
 .camera_wrap {
 	direction: ltr;
@@ -67,22 +62,7 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 60%;
-	padding: 210px 140px;
-}
-.cameraContent h1{
-	font-size: 55px;
-    line-height: 70px;
-    text-transform: uppercase;
-}
-
-.cameraContent h3{
-	font-size: 30px;
-    line-height: 45px;
-}
-
-.cameraContent p{
-	color:#fff;
+	width: 100%;
 }
 .camera_target {
 	bottom: 0;
@@ -469,7 +449,8 @@
     border-top-color: #e6e6e6;
 }
 .camera_prevThumbs, .camera_nextThumbs, .camera_prev, .camera_next, .camera_commands, .camera_thumbs_cont {
-	background: #fff;
+	background: #d8d8d8;
+	background: rgba(216, 216, 216, 0.85);
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	background: #b7b7b7;

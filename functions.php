@@ -46,6 +46,7 @@ function themetim_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'themetim' ),
 		'footer-1' => esc_html__( 'Footer 1', 'themetim' ),
+		'footer-2' => esc_html__( 'Footer 2', 'themetim' ),
 		'footer-3' => esc_html__( 'Footer 3', 'themetim' ),
 	) );
 
@@ -123,8 +124,8 @@ add_action( 'widgets_init', 'themetim_widgets_init' );
  * fonts.googleapis.com/css?family=Open+Sans:400,600
  */
 function themetim_scripts() {
-	wp_enqueue_style( 'themetim-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_family','Open Sans').":".get_theme_mod('body_font_weight','300,400')) );
-	wp_enqueue_style( 'themetim-heading-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('heading_font_family','Oswald').":".get_theme_mod('heading_font_weight','400,700')) );
+	wp_enqueue_style( 'themetim-body-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('body_font_family','Open+Sans').":".get_theme_mod('body_font_weight','300,400')) );
+	wp_enqueue_style( 'themetim-heading-fonts', '//fonts.googleapis.com/css?family=' . esc_attr(get_theme_mod('heading_font_family','Open+Sans').":".get_theme_mod('heading_font_weight','400,700')) );
 	wp_enqueue_style( 'themetim-animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '3.5.1' );
 	wp_enqueue_style( 'themetim-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.5.0' );
 	wp_enqueue_style( 'themetim-animsition', get_template_directory_uri() . '/assets/css/animsition.min.css', array(), '4.0.2' );
@@ -164,7 +165,10 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
+/**
+ * ThemeTim Breadcrumb
+ */
+require get_template_directory() . '/inc/breadcrumb.php';
 /**
  * Load Jetpack compatibility file.
  */

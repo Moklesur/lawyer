@@ -23,7 +23,7 @@
 <div class="preloader animsition">
 <header class="header">
 	<!--------------- Header Top ---------------->
-	<section class="header-top padding-top-10 text-center-xs">
+	<section class="header-top padding-top-10 padding-bottom-10 text-center-xs">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 col-xs-12">
@@ -37,11 +37,10 @@
 			</div>
 		</div>
 	</section>
-	<!--------------- Header Bottom ---------------->
-	<section class="header-bottom">
+	<!--------------- Header Middle ---------------->
+	<section class="header-middle position-relative">
 		<div class="container">
 			<div class="row">
-				<!--------------- Primary Menu ---------------->
 				<div class="col-md-3 col-sm-4 col-xs-12 logo">
 					<?php
 					if (get_theme_mod('site_logo') != '') : ?>
@@ -51,7 +50,27 @@
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'description' ); ?></a></p>
 					<?php endif ?>
 				</div>
-				<div class="col-md-9 col-sm-8 col-xs-12">
+				<div class="col-md-9 col-sm-8 col-xs-12 text-right mini-cart">
+					<ul class="list-inline">
+						<li>
+							<?php
+							if ( class_exists( 'WooCommerce' ) ) : if(get_theme_mod( 'cart_enable', '1' )) :
+								?>
+								<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa fa-shopping-basket"></i> <?php echo WC()->cart->get_cart_total(); ?> <span class="badge"><?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+								<?php
+							endif; endif;
+							?>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--------------- Header Bottom ---------------->
+	<section class="header-bottom">
+		<div class="container">
+			<div class="row">
+				<!--------------- Primary Menu ---------------->
 				<nav class="navbar navbar-default text-uppercase primary-menu">
 					<div class="navbar-header">
 						<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
@@ -60,10 +79,10 @@
 							<span class="icon-bar"></span>
 						</button>
 					</div>
-					<div id="navbar-collapse" class="navbar-collapse collapse padding-null">
+					<div id="navbar-collapse" class="navbar-collapse collapse">
 						<?php
 						if ( has_nav_menu( 'primary' ) ) :
-							wp_nav_menu( array('menu' => 'primary', 'theme_location' => 'primary', 'depth'             => 5, 'container' => '', 'menu_id' => 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav pull-right', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker()));
+							wp_nav_menu( array('menu' => 'primary', 'theme_location' => 'primary', 'depth'             => 5, 'container' => '', 'menu_id' => 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker()));
 						else: echo '<p class="margin-top-10 pull-left text-capitalize">Please select <a href="/wp-admin/nav-menus.php" class="text-muted">Primary Menu</a> </p>';
 						endif;
 						?>
@@ -80,12 +99,19 @@
 						<?php endif ?>
 					</div>
 				</nav>
-				</div>
 			</div>
 		</div>
 	</section>
 </header>
 <?php if ( class_exists( 'WooCommerce' ) && !is_front_page()) {?>
 <!--------------- Woo Breadcrumb ---------------->
-
+<section class="breadcrumb-wrap text-capitalize">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<?php woocommerce_breadcrumb(); ?>
+			</div>
+		</div>
+	</div>
+</section>
 <?php }
